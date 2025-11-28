@@ -1,0 +1,159 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(320deg, #ffffff, #b0dfe8);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.soundfluencersLogo {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 4px 4px 0 0;
+  margin-left: 10px;
+}
+
+.logoDot {
+  width: 5px;
+  height: 5px;
+  background-color: #ff4500;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.progressBarContainer {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e0e0e0;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #007bff;
+}
+
+.loadingMain {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audioVisualizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.bar {
+  width: 12px;
+  border-radius: 70px;
+  background: linear-gradient(
+    to right,
+    #bce8ff 0%,
+    #daf4ff 25%,
+    #bfd8ff 75%,
+    #a4bcff 100%
+  );
+
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.8),
+    2px 2px 5px rgba(174, 199, 219, 0.5);
+
+  opacity: 0;
+  animation: appear-cycle 3s steps(1) infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes appear-cycle {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  31%,
+  70% {
+    opacity: 1;
+  }
+  71%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.loadingHeader {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+  padding: 24px;
+}
+
+.soundfluencersLogo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 4px 4px 0 0;
+  margin-left: 108px;
+  z-index: 1;
+}
+
+.logoWave {
+  display: flex;
+  align-items: center;
+  height: 14px;
+  margin-right: 10px;
+  gap: 2px;
+}
+
+.logoBar {
+  width: 3px;
+  border-radius: 5px;
+  background-color: #ff793e;
+}
+
+.logoBar1 {
+  height: 12px;
+}
+.logoBar2 {
+  height: 18px;
+}
+.logoBar3 {
+  height: 10px;
+}
+.logoBar4 {
+  height: 5px;
+}
+
+.btn {
+  background: none;
+  border: 1px solid rgb(242, 242, 244);
+
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.btn:hover {
+  border: 2px solid rgb(38, 133, 212);
+}

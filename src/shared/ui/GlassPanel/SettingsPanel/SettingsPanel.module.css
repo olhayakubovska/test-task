@@ -1,0 +1,175 @@
+.settingsPanel {
+  width: 250px;
+  background: #2e2e2e;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  color: #d0d0d0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  /* position: relative; */
+  /* transform: translate(10px, 10px); */
+  position: fixed;
+  right: 130px; /* Панель справа */
+  top: 35px;
+}
+
+.settingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #3c3c3c;
+  margin-bottom: 8px;
+}
+
+.settingsTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settingsBeta {
+  font-size: 8px;
+  padding: 3px 7px;
+  background: #4a4a4a;
+  border-radius: 3px;
+  color: #b0b0b0;
+}
+
+.settingsResetBtn {
+  background: none;
+  border: 1px solid #4a4a4a;
+  color: #909090;
+  font-size: 11px;
+  padding: 5px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.settingsResetBtn:hover {
+  background: #4a4a4a;
+  color: #cfcfcf;
+}
+
+.settingsGroup {
+  margin-bottom: 10px;
+}
+
+.settingsLabel {
+  font-size: 12px;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.sliderControl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.customSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    #4a90e2 0%,
+    #4a90e2 var(--value, 0%),
+    #4a4a4a var(--value, 0%),
+    #4a4a4a 100%
+  );
+  border-radius: 4px;
+}
+
+.customSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  cursor: grab;
+  margin-top: -3px;
+}
+
+.customSlider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  cursor: grab;
+  border: none;
+}
+
+.sliderValue {
+  width: 24px;
+  text-align: right;
+  font-size: 10px;
+}
+
+.settingsSeparator {
+  height: 1px;
+  background: #3a3a3a;
+  margin: 10px 0;
+}
+
+.lightControlContainer {
+  display: flex;
+  gap: 6px;
+}
+
+.lightControls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lightValueBox {
+  background: #3a3a3a;
+  border-radius: 4px;
+  padding: 25px 22px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 15px;
+}
+
+.lightSettingVisual {
+  width: 150px;
+  height: 150px;
+  background: #3a3a3a;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden; /* скрываем всё, что выходит за пределы блока */
+}
+
+.lightIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 2;
+  transform-origin: top left;
+
+  transform: translate(-50%, -50%) rotate(var(--angle, -45deg));
+}
+
+.lightBeam {
+  position: absolute;
+  top: 50%; /* центр по вертикали */
+  left: 50%; /* центр по горизонтали */
+  width: 120px; /* длина луча */
+  height: 120px; /* высота луча */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 100%
+  );
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  pointer-events: none;
+  z-index: 1;
+  transform-origin: top left;
+}
