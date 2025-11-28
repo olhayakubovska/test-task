@@ -2,25 +2,12 @@
   position: relative;
   border-radius: 16px;
   padding: 20px;
-
   backdrop-filter: blur(var(--blur-value, 10px)) saturate(180%);
-  /* backdrop-filter: blur(10px) saturate(180%); */
-
-
   background: rgba(255, 255, 255, var(--bg-alpha, 0.25));
-
-
   box-shadow: var(--shadow-pos-x, 0px) var(--shadow-pos-y, 8px)
     var(--frost-shadow-spread, 20px) rgba(0, 0, 0, var(--shadow-opacity, 0.2));
-
   overflow: hidden;
-
-  
 }
-
-
-
-
 
 .lightHighlight {
   position: absolute;
@@ -34,7 +21,6 @@
   );
 }
 
-
 .glassPanel::before {
   content: "";
   position: absolute;
@@ -42,18 +28,16 @@
   pointer-events: none;
 
   background: radial-gradient(
-    circle at
-      calc(50% + cos(var(--light-angle)) * 30%) 
+    circle at calc(50% + cos(var(--light-angle)) * 30%)
       calc(50% + sin(var(--light-angle)) * 30%),
     rgba(82, 81, 81, 0.5) 30%,
     rgba(0, 0, 0, 0.05) 70%,
     transparent 100%
   );
 
-    filter: blur(var(--inset-shadow-blur, 10px));
+  filter: blur(var(--inset-shadow-blur, 10px));
   opacity: 1;
 }
-
 
 .glassPanel::after {
   content: "";
@@ -65,4 +49,3 @@
     calc(var(--shadow-pos-y, 0px) * -1) var(--frost-shadow-spread, 100px)
     rgba(255, 255, 255, 0.4);
 }
-

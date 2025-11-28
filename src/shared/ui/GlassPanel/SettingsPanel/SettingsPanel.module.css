@@ -6,10 +6,8 @@
   font-family: "Inter", sans-serif;
   color: #d0d0d0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  /* position: relative; */
-  /* transform: translate(10px, 10px); */
   position: fixed;
-  right: 130px; /* Панель справа */
+  right: 130px;
   top: 35px;
 }
 
@@ -140,7 +138,7 @@
   background: #3a3a3a;
   border-radius: 6px;
   position: relative;
-  overflow: hidden; /* скрываем всё, что выходит за пределы блока */
+  overflow: hidden;
 }
 
 .lightIndicator {
@@ -158,10 +156,10 @@
 
 .lightBeam {
   position: absolute;
-  top: 50%; /* центр по вертикали */
-  left: 50%; /* центр по горизонтали */
-  width: 120px; /* длина луча */
-  height: 120px; /* высота луча */
+  top: 50%; 
+  left: 50%; 
+  width: 120px;
+  height: 120px; 
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.3) 0%,
