@@ -1,7 +1,8 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import s from "./GlassPanel.module.css";
 
 export type GlassPanelProps = {
+  children?: ReactNode;
   refraction?: number;
   depth?: number;
   dispersion?: number;
@@ -11,6 +12,8 @@ export type GlassPanelProps = {
   height?: string;
 };
 
+
+
 const GlassPanel = ({
   refraction = 80,
   depth = 20,
@@ -19,6 +22,7 @@ const GlassPanel = ({
   lightAngle = -45,
   width = "186px",
   height = "36px",
+  children,
 }: GlassPanelProps) => {
   const offsetMagnitude = Math.abs(lightAngle) / 10;
   const shadowPosX = `${(lightAngle > 0 ? -1 : 1) * offsetMagnitude}px`;
@@ -47,6 +51,7 @@ const GlassPanel = ({
 
   return (
     <div style={glassStyles} className={s.glassPanel}>
+      <div className={s.children}>{children}</div>
       <div
         className={s.lightHighlight}
         style={{ transform: `rotate(${lightAngle}deg)` }}

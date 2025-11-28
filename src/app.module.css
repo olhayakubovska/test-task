@@ -40,10 +40,10 @@
 
 .uiElementsWrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  z-index: 1;
+  gap: 8px;
+  
+
 }
 .soundInfluencersLogo {
   margin-top: 20px;

@@ -1,12 +1,15 @@
 .glassPanel {
   position: relative;
   border-radius: 16px;
-  padding: 20px;
+  padding: 10px;
   backdrop-filter: blur(var(--blur-value, 10px)) saturate(180%);
   background: rgba(255, 255, 255, var(--bg-alpha, 0.25));
   box-shadow: var(--shadow-pos-x, 0px) var(--shadow-pos-y, 8px)
     var(--frost-shadow-spread, 20px) rgba(0, 0, 0, var(--shadow-opacity, 0.2));
   overflow: hidden;
+  z-index: 0;
+  width: 186px;
+  height: 36px;
 }
 
 .lightHighlight {
@@ -48,4 +51,27 @@
   box-shadow: inset calc(var(--shadow-pos-x, 0px) * -1)
     calc(var(--shadow-pos-y, 0px) * -1) var(--frost-shadow-spread, 100px)
     rgba(255, 255, 255, 0.4);
+}
+
+
+.glassPanel::before,
+.glassPanel::after {
+  z-index: 1; 
+}
+
+.lightHighlight {
+  z-index: 2; 
+}
+
+.children {
+  position: absolute;
+  inset: 0;
+  z-index: 3; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  pointer-events: none;
 }
